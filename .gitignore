@@ -1,0 +1,3 @@
+# Ignore trace data files
+traces/*.npy
+traces/
