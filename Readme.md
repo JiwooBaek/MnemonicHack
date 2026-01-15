@@ -39,9 +39,9 @@ pip install -r requirements.txt
 **2. PhyWhisperer USB & Hardware Drivers**
 The following libraries are required for hardware control (PhyWhisperer USB):
 
-pip install phywhisperer pyvisa pyvisa-py
-pip install libusb libusb-package
-pip install backports.tarfile
+pip install phywhisperer pyvisa pyvisa-py  
+pip install libusb libusb-package  
+pip install backports.tarfile  
 
 ### Option B: Docker Environment (Recommended)
 
@@ -52,7 +52,7 @@ Ensure the **NVIDIA Container Toolkit** is installed to enable GPU support withi
 
 * **Installation Guide:** Official Documentation (Copy link manually)
   `https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html`
-  
+
 **2. Build the Image**
 
 docker build -t mnemonic-hack .
