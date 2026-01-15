@@ -5,7 +5,7 @@ This repository contains the source code and datasets for the paper
 Hardware Wallets via Side-Channel Attacks"**.
 
 ## Directory Structure
-
+```
 .  
 ├── Dockerfile         
 ├── requirements.txt      
@@ -24,7 +24,7 @@ Hardware Wallets via Side-Channel Attacks"**.
 │   └── train.py              
 └── evaluation/  
     └── eval.ipynb            
-
+```
 ## Requirements
 
 You can set up the environment manually via `pip` or use the provided Docker image for a reproducible environment.
