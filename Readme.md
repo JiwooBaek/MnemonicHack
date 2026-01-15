@@ -21,7 +21,9 @@ Hardware Wallets via Side-Channel Attacks"**.
 │   ├── logs_manual_prep/  
 │   ├── models/                
 │   ├── bip39_english.c       
-│   └── train.py              
+│   └── train.py           
+│   └── preprocessing_quick.ipynb
+│   └── preprocessing.ipynb
 └── evaluation/  
     └── eval.ipynb            
 ```
