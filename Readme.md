@@ -51,7 +51,7 @@ A `Dockerfile` is provided to facilitate a reproducible environment with all nec
 Ensure the **NVIDIA Container Toolkit** is installed to enable GPU support within the container.
 
 * **Installation Guide:** Official Documentation (Copy link manually)
-  `https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html`
+  `docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html`
 
 **2. Build the Image**
 
@@ -72,7 +72,7 @@ Follow these steps to quickly verify the model performance using the pre-capture
 Due to size constraints, datasets are hosted externally.
 * **Source:** OSF Repository
   (Please copy and paste the URL below manually)
-  `https://osf.io/9y3gd/overview?view_only=8de7507e358644c390f68c7f4fe6dcc2`
+  `osf.io/9y3gd/overview?view_only=8de7507e358644c390f68c7f4fe6dcc2`
 * **Action:** Download `traces/filtered_trace_D_d_20000.npy` and place it in the `datasets/traces/` directory.
 
 ### 2. Run Evaluation
@@ -105,7 +105,7 @@ To enable GPIO triggering, modify the firmware source as follows:
 1.  Replace `legacy/firmware/config.c` in the original source with `firmware/config.c` provided in this repository.
 2.  Copy `firmware/trigger.h` to `legacy/firmware/`.
 3.  Build the firmware using Docker. Refer to the official build guide below:
-    `https://docs.trezor.io/trezor-firmware/legacy/index.html?highlight=build#building-with-docker`
+    `docs.trezor.io/trezor-firmware/legacy/index.html?highlight=build#building-with-docker`
 ### 4. Trace Acquisition
 Run the capture script:
 
@@ -133,4 +133,4 @@ Run `evaluation/eval.ipynb` as described in the **Quick Start** section to analy
 The large-scale datasets used in Section 5 are hosted on the Open Science Framework (OSF) due to file size limits.
 
 * **URL:** (Please copy and paste the link below manually)
-  `https://osf.io/9y3gd/overview?view_only=8de7507e358644c390f68c7f4fe6dcc2`
+  `osf.io/9y3gd/overview?view_only=8de7507e358644c390f68c7f4fe6dcc2`
