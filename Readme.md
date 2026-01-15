@@ -98,7 +98,7 @@ Instructions to reproduce the experiment from scratch, including firmware setup,
 
 ### 2. Firmware Preparation
 Download the official Trezor firmware source:
-* **URL:** `https://github(dot))com/trezor/trezor-firmware`
+* **URL:** `github.com/trezor/trezor-firmware`
 
 ### 3. Firmware Modification
 To enable GPIO triggering, modify the firmware source as follows:
