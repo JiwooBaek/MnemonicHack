@@ -48,8 +48,11 @@ pip install backports.tarfile
 A `Dockerfile` is provided to facilitate a reproducible environment with all necessary GPU libraries and dependencies.
 
 **1. Prerequisites**
-Ensure the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) is installed to enable GPU support within the container.
+Ensure the **NVIDIA Container Toolkit** is installed to enable GPU support within the container.
 
+* **Installation Guide:** Official Documentation (Copy link manually)
+  `https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html`
+  
 **2. Build the Image**
 
 docker build -t mnemonic-hack .
@@ -67,7 +70,9 @@ Follow these steps to quickly verify the model performance using the pre-capture
 
 ### 1. Download Test Dataset
 Due to size constraints, datasets are hosted externally.
-* **Source:** [OSF Repository](https://osf.io/9y3gd/overview?view_only=8de7507e358644c390f68c7f4fe6dcc2)
+* **Source:** OSF Repository
+  (Please copy and paste the URL below manually)
+  `https://osf.io/9y3gd/overview?view_only=8de7507e358644c390f68c7f4fe6dcc2`
 * **Action:** Download `traces/filtered_trace_D_d_20000.npy` and place it in the `datasets/traces/` directory.
 
 ### 2. Run Evaluation
@@ -93,14 +98,14 @@ Instructions to reproduce the experiment from scratch, including firmware setup,
 
 ### 2. Firmware Preparation
 Download the official Trezor firmware source:
-* URL: https://github.com/trezor/trezor-firmware
+* **URL:** `https://github.com/trezor/trezor-firmware`
 
 ### 3. Firmware Modification
 To enable GPIO triggering, modify the firmware source as follows:
 1.  Replace `legacy/firmware/config.c` in the original source with `firmware/config.c` provided in this repository.
 2.  Copy `firmware/trigger.h` to `legacy/firmware/`.
-3.  Build the firmware using Docker. Refer to the [official build guide](https://docs.trezor.io/trezor-firmware/legacy/index.html?highlight=build#building-with-docker).
-
+3.  Build the firmware using Docker. Refer to the official build guide below:
+    `https://docs.trezor.io/trezor-firmware/legacy/index.html?highlight=build#building-with-docker`
 ### 4. Trace Acquisition
 Run the capture script:
 
@@ -127,4 +132,5 @@ Run `evaluation/eval.ipynb` as described in the **Quick Start** section to analy
 
 The large-scale datasets used in Section 5 are hosted on the Open Science Framework (OSF) due to file size limits.
 
-* **URL:** https://osf.io/9y3gd/overview?view_only=8de7507e358644c390f68c7f4fe6dcc2
+* **URL:** (Please copy and paste the link below manually)
+  `https://osf.io/9y3gd/overview?view_only=8de7507e358644c390f68c7f4fe6dcc2`
