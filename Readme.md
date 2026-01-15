@@ -29,7 +29,7 @@ Hardware Wallets via Side-Channel Attacks"**.
 
 You can set up the environment manually via `pip` or use the provided Docker image for a reproducible environment.
 
-### Option A: Manual Installation
+### Installation 
 
 **1. Python Dependencies**
 Install the required packages:
@@ -43,21 +43,21 @@ pip install phywhisperer pyvisa pyvisa-py
 pip install libusb libusb-package  
 pip install backports.tarfile  
 
-### Option B: Docker Environment (Recommended)
+**3. Docker Environment (Recommended)**
 
 A `Dockerfile` is provided to facilitate a reproducible environment with all necessary GPU libraries and dependencies.
 
-**1. Prerequisites**
+**4. Prerequisites**
 Ensure the **NVIDIA Container Toolkit** is installed to enable GPU support within the container.
 
 * **Installation Guide:** Official Documentation (Copy link manually)
   `docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html`
 
-**2. Build the Image**
+**5. Build the Image**
 
 docker build -t mnemonic-hack .
 
-**3. Run the Container**
+**6. Run the Container**
 Launch the container with GPU access and volume mounting (to persist results and models):
 
 docker run --gpus all -it --rm -v $(pwd):/workspace mnemonic-hack
@@ -73,7 +73,14 @@ Due to size constraints, datasets are hosted externally.
 * **Source:** OSF Repository
   (Please copy and paste the URL below manually)
   `osf.io/9y3gd/overview?view_only=8de7507e358644c390f68c7f4fe6dcc2`
-* **Action:** Download `traces/filtered_trace_D_d_20000.npy` and place it in the `datasets/traces/` directory.
+* **Action:** Download `traces/trace_D_d_20000.npy` and place it in the `datasets/traces/` directory.
+
+### 2. Preprocessing 
+Preprocess all files downloaded in Step 1 using the provided Jupyter notebook:
+
+Run DL-SCA/preprocessing_quick.ipynb.
+### 3. Model Training
+python DL-SCA/train.py
 
 ### 2. Run Evaluation
 Execute the Jupyter notebook at `evaluation/eval.ipynb` to perform inference using the pre-trained model.
